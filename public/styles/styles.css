@@ -56,6 +56,10 @@ blockquote p {
   margin: 10px 0;
 }
 
+blockquote em {
+  font-weight: bold;
+}
+
 a {
   color: black;
   text-decoration-thickness: 1pt;
