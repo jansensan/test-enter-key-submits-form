@@ -3,21 +3,88 @@
   <head>
     <meta charset="UTF-8">
     <title>Enter Key Should Submit Form</title>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
   </head>
   <body>
-    <h1><kbd>ENTER</kbd> Key Should Submit Form</h1>
+    <div class="container">
+      <h1><kbd>ENTER</kbd> Key Should Submit Form</h1>
 
-    <form action="" method="get">
-      <p>Fields marked with an asterisk (*) are required.</p>
-      <div>
-        <label for="username">Name*</label>
-        <input type="text" name="username" id="username" required>
-      </div>
-      <div>
-        <label for="password">Password*</label>
-        <input type="password" name="password" id="password">
-      </div>
-      <input type="submit" value="Submit">
-    </form>
+      <section>
+        <h2>Form</h2>
+        <form
+          id="form"
+          class="form"
+          action=""
+          method="get"
+          data-dirty="false"
+          data-valid-name
+          data-valid-password
+          novalidate
+        >
+          <p>Fields marked with an asterisk (*) are required.</p>
+
+          <div class="form-row">
+            <label for="username">Name*</label>
+            <p class="error-message name-error-message">❌ Ensure to enter a name lorem ipsum dolor sit amet.</p>
+            <input type="text" name="username" id="username" required>
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password*</label>
+            <p class="error-message password-error-message">❌ Ensure to enter a password lorem ipsum dolor sit amet.</p>
+            <input type="password" name="password" id="password">
+          </div>
+
+          <div class="form-row">
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments"></textarea>
+          </div>
+
+          <div class="form-row">
+            <input type="submit" value="Submit" class="primary-btn">
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h2>References</h2>
+  
+        <div>
+          <h3>
+            <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission">
+              4.10.21.2 Implicit submission | HTML Standard
+            </a>
+          </h3>
+          <blockquote>If the user agent supports letting the user submit a form implicitly (for example, on some platforms hitting the "enter" key while a text control is focused implicitly submits the form), then doing so for a form, whose default button has activation behavior and is not disabled, must cause the user agent to fire a click event at that default button.</blockquote>
+        </div>
+  
+        <div>
+          <h3>
+            <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H32">
+              Technique H32: Providing submit button | WCAG 2.1 Techniques
+            </a>
+          </h3>
+          <blockquote>This technique is Sufficient to meet 3.2.2: On Input when used with G80: Providing a submit button to initiate a change of context.</blockquote>
+        </div>
+  
+        <div>
+          <h3>
+            <a href="https://ux.stackexchange.com/questions/36713/behavior-of-the-enter-button-in-a-form">
+              Behavior of the Enter button in a form | UX StackExchange
+            </a>
+          </h3>
+          <blockquote>
+            <p>It depends on what type of field it is in the form.</p>
+            <p>If 'enter' has a meaning within that form element, then you should have it behave according to that meaning. For example, if it's a textbox, 'enter' should take them to the next line. If it is a table, then 'enter' should move down to the cell below the current one.</p>
+            <p>If 'enter' has no meaning within that form element, it should submit the form.</p>
+            <p>The standard which you should us, it to 'tab' between fields, unless tab has a meaning within the form field. For example, if it's a table, 'tab' should move to the next cell.</p>
+            <p>— <a href="https://ux.stackexchange.com/users/4595/johngb">JohnGB</a>, Mar 20, 2013 at 11:42</p>
+          </blockquote>
+        </div>
+      </section>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>

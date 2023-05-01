@@ -1,0 +1,160 @@
+html, body {
+  background-color: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  padding: 50px;
+}
+
+
+/* global */
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 24pt;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+h3 {
+  font-size: 16pt;
+}
+
+label {
+  font-size: 10pt;
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"], 
+input[type="password"] {
+  display: block;
+  border: 1px solid black;
+
+}
+
+blockquote {
+  background-color: #eeeeee;
+  border-left: 2px solid blue;
+  color: #333333;
+  font-style: italic;
+  padding: 20px;
+}
+
+blockquote p {
+  margin: 10px 0;
+}
+
+a {
+  color: black;
+  text-decoration-thickness: 1pt;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+:focus {
+  box-shadow:
+    0 0 0 2px white,
+    0 0 0 4px green;
+  outline: none;
+}
+
+
+/* form */
+.form {
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 50px;
+  padding: 20px 10px;
+}
+
+.form-row {
+  display: block;
+  margin: 20px 0;
+}
+
+.form-row input[type="password"],
+.form-row input[type="text"],
+.form-row textarea {
+  border: 1px solid black;
+  font-size: 16px;
+  margin-top: 5px;
+  width: calc(100% - 20px);
+}
+
+.form-row input[type="password"],
+.form-row input[type="text"] {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.form-row textarea {
+  min-height: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  line-height: 1.25;
+  padding: 10px;
+}
+
+
+/* invalid form */
+.error-message {
+  background-color: #FDF2F3;
+  color: #cc0000;
+  display: none;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.form[data-dirty="true"][data-valid-name="false"] input[type="text"],
+.form[data-dirty="true"][data-valid-password="false"] input[type="password"] {
+  color: #cc0000;
+  border-color: #cc0000;
+  background-color: #FDF2F3;
+}
+
+.form[data-dirty="true"][data-valid-name="false"] .name-error-message,
+.form[data-dirty="true"][data-valid-password="false"] .password-error-message {
+  display: block;
+}
+
+
+/* ui */
+.primary-btn {
+  background-color: #FFCB05;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 35px;
+}
+
+.primary-btn:hover {
+  background-color: #FAE021;
+  text-decoration: none;
+}
+
+kbd {
+  background-color: #eeeeee;
+  border: 1px solid lightgrey;
+  font-family:'Courier New', Courier, monospace;
+  padding: 2.5pt 10pt;
+  border-radius: 5px;
+}
